@@ -3,6 +3,17 @@
 //Даний рядок, що складається із символів, наприклад, 'abcde'.
 // Перевірте, що першим символом цього рядка є буква 'a'.
 // Якщо це так - виведіть 'так', інакше виведіть 'ні'.
+// const string = "Abcde";
+// if (string[0].toLowerCase() === "a") {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// function checkString(str) {
+//   return str.toLowerCase().startsWith("a");
+// }
+// console.log(checkString(string));
 
 //TODO: 2 ===================================
 // У змінній min лежить число від 0 до 60. Визначте у котру чверть години
