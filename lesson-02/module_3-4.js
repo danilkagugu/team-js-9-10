@@ -6,9 +6,32 @@
 // Видалить перший елемент масиву і виведіть його в консоль.
 // Вставте «Реп» і «Реггі» на початок масиву.
 
+// const styles = ['Джаз', 'Блюз'];
+// styles.push("Рок-н-рол");
+// // styles[1] = "Класика";
+// const index = styles.indexOf("Блюз");
+// styles[index] = "Класика";
+
+// console.log(styles.shift());
+
+// styles.unshift('Реп', 'Реггі');
+// console.log(styles.includes("Класика"));
+// const numbers = [1, 2, 3, 4];
+// const newArray = styles.concat(numbers);
+// console.log(newArray);
+
+
+
+
 //TODO:=========task-02=================
 //Перетворити рядок, що містить слова, розділені комами, в масив слів і вивести кожне слово в окремому рядку.
 // const str = 'JavaScript, HTML, CSS, React';
+// const strArray = str.split(', ');
+// // console.log(strArray);
+
+// for (const word of strArray) {
+//     console.log(word);
+// }
 
 //TODO:=========task-03=================
 // Знайти кількість слів у рядку, використовуючи методи масивів та цикл for...of.
