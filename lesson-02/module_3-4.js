@@ -42,15 +42,22 @@
 
 //TODO:=========task-04=================
 // Об'єднати масив слів в рядок, розділений комами та пробілами.
-const words = ["JavaScript", "HTML", "CSS", "React"];
-const str = words.join(", ");
-console.log(str);
+// const words = ["JavaScript", "HTML", "CSS", "React"];
+// const str = words.join(", ");
+// console.log(str);
 
 //TODO:=========task-05=================
 // Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." .Результат повинен бути розділений комами та пробілами.(використати indexOf)
 
-// const stringArray = ['JavaScript', 'HTML', 'CSS', 'React'];
-// const substring = 'S';
+// const stringArray = ["JavaScript", "HTML", "CSS", "React"];
+// const substring = "S";
+// const newArray = [];
+// for (const word of stringArray) {
+//   if (word.indexOf(substring) !== -1) {
+//     newArray.push(word);
+//   }
+// }
+// const joinedArray = newArray.join(", ");
 
 // console.log(
 //   `Масив елементів, що містять підстроку ${substring} : ${joinedArray}`
@@ -58,8 +65,11 @@ console.log(str);
 
 //TODO:=========task-06=================
 // Перевірити, чи містить масив заданий елемент. Якщо містить, видалити його, якщо ні - додати в кінець масиву.
-//  const array = ['JavaScript', 'HTML', 'CSS', 'SS'];
-//  const elem = 'SS';
+// const array = ["JavaScript", "HTML", "CSS", "SS"];
+// const elem = "Git";
+// const index = array.indexOf(elem);
+// index === -1 ? array.push(elem) : array.splice(index, 1);
+// console.log(array);
 
 //TODO:============task-07==============
 // Напишіть функцію min(a, b), яка повертає
