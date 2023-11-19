@@ -20,9 +20,6 @@
 // const newArray = styles.concat(numbers);
 // console.log(newArray);
 
-
-
-
 //TODO:=========task-02=================
 //Перетворити рядок, що містить слова, розділені комами, в масив слів і вивести кожне слово в окремому рядку.
 // const str = 'JavaScript, HTML, CSS, React';
@@ -35,11 +32,19 @@
 
 //TODO:=========task-03=================
 // Знайти кількість слів у рядку, використовуючи методи масивів та цикл for...of.
-// const message = 'JavaScript is a popular programming language.';
+// const message = "JavaScript is a popular programming language.";
+// const newArray = message.split(" ").length;
+// let total = 0;
+// for (const sum of newArray) {
+//   total += 1;
+// }
+// console.log(newArray);
 
 //TODO:=========task-04=================
 // Об'єднати масив слів в рядок, розділений комами та пробілами.
-// const words = ['JavaScript', 'HTML', 'CSS', 'React'];
+const words = ["JavaScript", "HTML", "CSS", "React"];
+const str = words.join(", ");
+console.log(str);
 
 //TODO:=========task-05=================
 // Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." .Результат повинен бути розділений комами та пробілами.(використати indexOf)
