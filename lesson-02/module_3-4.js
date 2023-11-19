@@ -75,11 +75,25 @@
 // Напишіть функцію min(a, b), яка повертає
 // менше з чисел a, b
 // Потрібно додати перевірку, що функція отримує числа
+// function min(a, b) {
+//   if (typeof a !== "number" || typeof b !== "number") {
+//     return "It's not a number";
+//   }
+//   return Math.min(a, b);
+// }
+// console.log(min("fd", 8));
 
 //TODO:=============task-08=================
 // напиши функцію яка сумуватиме сусідні числа і пушити в новий масив
 
 // const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+// function sumAdjacentNumbers(arr) {
+//   const newArr = [];
+//   for (let i = 0; i < arr.length - 1; i += 1) {
+//     newArr.push(arr[i] + arr[i + 1]);
+//   }
+//   return newArr;
+// }
 
 // const result = sumAdjacentNumbers(someArr);
 // console.log(result); // [33, 45, 39, 17, 25, 27, 29]
