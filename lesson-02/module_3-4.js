@@ -104,13 +104,34 @@
 //аргументів і повертає їхнє середнє значення.
 //Додати перевірку, що аргументи це числа. Array.from()
 
-// console.log(calculateAverage(10, 10, 20, 200));
+// function calculateAverage(...args) {
+//     let sum = 0;
+//     let count = 0;
+//     for (const arg of args) {
+//         if (typeof arg === "number") {
+//             sum += arg; 
+//             count += 1;
+//         }    
+//     }
+//     return sum / count;
+// }
+// console.log(calculateAverage(10, 10, 20, 200, true));
 
 //TODO:=============task-10=================
 // Написати функцію, яка приймає рядок і повертає кількість голосних літер у цьому рядку. `Містить ${count} голосних`
 
-// const str = "This is a new line";
+// const str = "This Is a new line";
 // const vowels = ["a", "e", "i", "o", "u"];
+
+// function countVowels(string) {
+//     let count = 0;
+//     for (const letter of string.toLowerCase()) {
+//         // console.log(letter);
+//         count += vowels.includes(letter) ? 1 : 0;
+//     }
+//     return `Містить ${count} голосних`;
+// }
+
 
 // console.log(countVowels(str));
 
