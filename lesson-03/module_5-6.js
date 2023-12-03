@@ -1,8 +1,19 @@
 //! Callback
 //TODO:============task-01=========================
 // Напишіть функцію, яка приймає два числа і колбек-функцію. Функція повинна помножити числа між собою та передати результат дії до колбек-функції. Колбек-функція повинна, у разі, якщо, це число є парним - помножити це число на себе, якщо ні - взяти квадратний корінь з цього числа, та вивести результат у консоль лог.
+function performOperation(a, b, callback) {
+  return callback(a * b);
+}
 
-// const result = performOperation(20, 40, callbackFunction);
+function callbackFunction(num) {
+  if (num % 2 === 0) {
+    return Math.pow(num, 2);
+  } else {
+    return Math.sqrt(num);
+  }
+}
+
+const result = performOperation(3, 3, callbackFunction);
 // console.log(result);
 
 //TODO:============task-02=========================
@@ -12,11 +23,29 @@
 // повертатись перше парне число. При використанні другого - має повертатись перше слово у масиві, що починається з літери
 // "O" у будь - якому реєстрі.
 
-// const numbers = [1, 3, 5, 7, 9, 20];
-// const words = ['apple', 'banana', 'orange', 'pear'];
+const numbers = [1, 3, 2, 7, 9, 20];
+const words = ["apple", "banana", "orange", "pear", "onion"];
 
-// const res = findElement(numbers, isEven);
+function findElement(arr, callback) {
+  let result = null;
+  for (const element of arr) {
+    if (callback(element)) {
+      result = element;
+      break;
+    }
+  }
+  return result;
+}
+function isEven(number) {
+  return number % 2 === 0;
+}
+function startWithO(str) {
+  return str.toLowerCase().startsWith("o");
+}
+const res = findElement(numbers, isEven);
 // console.log(res);
+const res1 = findElement(words, startWithO);
+// console.log(res1);
 
 //! Array methods
 //TODO:=========task-01=================
