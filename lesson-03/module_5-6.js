@@ -23,35 +23,37 @@ const result = performOperation(3, 3, callbackFunction);
 // повертатись перше парне число. При використанні другого - має повертатись перше слово у масиві, що починається з літери
 // "O" у будь - якому реєстрі.
 
-const numbers = [1, 3, 2, 7, 9, 20];
-const words = ["apple", "banana", "orange", "pear", "onion"];
+// const numbers = [1, 3, 2, 7, 9, 20];
+// const words = ["apple", "banana", "orange", "pear", "onion"];
 
-function findElement(arr, callback) {
-  let result = null;
-  for (const element of arr) {
-    if (callback(element)) {
-      result = element;
-      break;
-    }
-  }
-  return result;
-}
-function isEven(number) {
-  return number % 2 === 0;
-}
-function startWithO(str) {
-  return str.toLowerCase().startsWith("o");
-}
-const res = findElement(numbers, isEven);
-// console.log(res);
-const res1 = findElement(words, startWithO);
+// function findElement(arr, callback) {
+//   let result = null;
+//   for (const element of arr) {
+//     if (callback(element)) {
+//       result = element;
+//       break;
+//     }
+//   }
+//   return result;
+// }
+// function isEven(number) {
+//   return number % 2 === 0;
+// }
+// function startWithO(str) {
+//   return str.toLowerCase().startsWith("o");
+// }
+// // const res = findElement(numbers, isEven);
+// // console.log(res);
+// const res1 = findElement(words, startWithO);
 // console.log(res1);
 
 //! Array methods
 //TODO:=========task-01=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Створіть новий масив, що містить квадрати кожного елементу вхідного масиву. Очікуваний результат: [1, 4, 9, 16, 25].
 
-// const res = getNewArray([1, 2, 3], 5);
+// const getNewArray = (arr) => arr.map((element) => Math.pow(element, 2));
+
+// const res = getNewArray([1, 2, 3, 4, 5]);
 // console.log(res);
 
 //TODO:=========task-02=================
@@ -63,6 +65,8 @@ const res1 = findElement(words, startWithO);
 //   { id: 3, values: [7, 8, 9] },
 // ];
 
+// const flatArray = (arr) => arr.flatMap((element) => element.values);
+
 // const res = flatArray(data);
 // console.log(res);
 
@@ -70,10 +74,12 @@ const res1 = findElement(words, startWithO);
 // Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Перевірте, чи є хоча б один об'єкт з віком менше 20 років. Очікуваний результат: true.
 
 // const people = [
-//   { name: 'John', age: 27 },
-//   { name: 'Jane', age: 31 },
-//   { name: 'Bob', age: 19 },
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 21 },
 // ];
+
+// const checkAge = (arr) => arr.some((element) => element.age < 20);
 
 // const res = checkAge(people);
 // console.log(res);
@@ -83,6 +89,8 @@ const res1 = findElement(words, startWithO);
 
 // const numbers = [2, 4, 6, 8, 10];
 
+// const checkEvenArray = (arr) => arr.every((element) => element % 2 === 0);
+
 // const res = checkEvenArray(numbers);
 // console.log(res);
 
@@ -91,13 +99,17 @@ const res1 = findElement(words, startWithO);
 
 // const numbers = [1, 2, 3, 4, 5];
 
-// const res = getNumber(arr, 3);
+// const getNumber = (arr) => arr.find((element) => element > 3);
+
+// const res = getNumber(numbers);
 // console.log(res);
 
 //TODO:=========task-06=================
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
 
-// const numbersArray = [4, 2, 5, 1, 3];
+// const numbersArray = [4, 200, 5, 1000, 3];
+
+// const sortedArray = (arr) => arr.toSorted((a, b) => a - b);
 
 // const res = sortedArray(numbersArray);
 // console.log(res);
@@ -105,7 +117,9 @@ const res1 = findElement(words, startWithO);
 //TODO:===============task-07===============================
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
 
-// const stringArray = ['banana', 'orange', 'apple', 'pear'];
+// const stringArray = ["banana", "orange", "apple", "pear"];
+
+// const sortedArray = (arr) => arr.toSorted((a, b) => a.localeCompare(b));
 
 // const res = sortedArray(stringArray);
 // console.log(res);
@@ -114,12 +128,12 @@ const res1 = findElement(words, startWithO);
 //  Відсортуйте масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19} за віком у порядку зростання. Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
 
 // const users = [
-//   { name: 'John', age: 27 },
-//   { name: 'Jane', age: 31 },
-//   { name: 'Bob', age: 19 },
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
 // ];
 
-// const ageSortedUsers = (arr) => [...arr].toSorted((a, b) => a.age - b.age);
+// const ageSortedUsers = (arr) => arr.toSorted((a, b) => a.age - b.age);
 
 // const res = ageSortedUsers(users);
 // console.log(res);
@@ -128,10 +142,12 @@ const res1 = findElement(words, startWithO);
 // Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Створіть новий масив, що містить тільки об'єкти, в яких вік більше 20 років. Очікуваний результат: [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
 // const user = [
-//   { name: 'John', age: 27 },
-//   { name: 'Jane', age: 31 },
-//   { name: 'Bob', age: 19 },
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
 // ];
+
+// const getAge = (arr) => arr.filter((elemnt) => elemnt.age > 20);
 
 // const res = getAge(user, 25);
 // console.log(res);
@@ -141,6 +157,8 @@ const res1 = findElement(words, startWithO);
 
 // const numbers = [1, 2, 3, 4, 5];
 
+// const sum = (arr) => arr.reduce((acc, el) => acc + el, 0);
+
 // const res = sum(numbers);
 // console.log(res);
 
@@ -148,6 +166,8 @@ const res1 = findElement(words, startWithO);
 // У вас є масив чисел, і вам потрібно знайти середнє значення цих чисел. Напишіть функцію, яка приймає масив чисел і повертає середнє значення.
 
 // const arr = [1, 2, 3, 4, 5];
+
+// const averageValue = (arr) => arr.reduce((acc, el) => acc + el / arr.length, 0);
 
 // const res = averageValue(arr);
 // console.log(res);
