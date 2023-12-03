@@ -243,11 +243,14 @@ const user = {
 //  Викликати метод user.info() таким чином, щоб він вивів результатом  ({name: 'Bob', lactName: 'Lasso',age: 50, email: 'BodLasso@gmail.com'})
 
 // const obj = {
-//   name: 'Bob',
+//   userName: 'Bob',
 //   lastName: 'Lasso',
 //   age: 50,
 //   email: 'BodLasso@gmail.com',
 // };
+
+// // console.log(obj);
+// user.info.call(obj);
 
 //TODO:=========task-05=================
 //  Викличте функцію showFullName у контексті об'єкта user
@@ -267,7 +270,7 @@ const user = {
 //   callback();
 // }
 
-// callAction(product.showPrice);
+// callAction(product.showPrice.bind(product));
 
 //! class
 //TODO:=================task-01=============================
