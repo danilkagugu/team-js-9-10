@@ -176,8 +176,40 @@ const result = performOperation(3, 3, callbackFunction);
 //TODO:=========task-01=================
 // Створити об'єкт, який представляє користувача. У об'єкті повинні бути наступні поля: ім'я, прізвище, вік, email та метод, який виводить повну інформацію про користувача.
 
+const user = {
+  userName: "Pol",
+  lastName: "Jonson",
+  age: 27,
+  email: "pol@gmail.com",
+
+  info() {
+    console.log(this);
+  },
+
+  modify(key, newValue) {
+    if (key !== "userName" && key !== "lastName") {
+      return "Key is not value";
+    }
+
+    if (newValue[0] === newValue[0].toUpperCase() && newValue.length >= 3) {
+      return this[key] = newValue;
+    }
+  }
+} 
+// user.info();
+
+// console.log(user.modify("age", 32));
+// user.info();
+
+// const emploeer = Object.create(user);
+// emploeer.department = "developer";
+// console.log(emploeer);
+
+
 //TODO:=========task-02=================
 // Для обьекта "user", написати метод для зміни ім'я або прізвища(змінити можна лише якесь з цих полів, змінювати або додавати нові потрібно заборонити) з перевіркою на валідність даних(Перша літера має бути у верхньому реєстрі, довжина слова не менше 3 літер)
+
+
 
 // user.modify('firstName', 'Vlad');
 
