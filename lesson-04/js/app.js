@@ -102,3 +102,21 @@ for (let i = 0; i < 100; i += 1) {
 console.log(divArr);
 divContainer.append(...divArr);
 listEl.before(divContainer);
+
+// const inputEl = document.querySelector(".js-username-input");
+// inputEl.addEventListener("input", (event) => {
+//   if (event.target.value.length > 6) {
+//     event.target.classList.add("success")
+//     event.target.classList.remove("error")
+//   } else {
+//     event.target.classList.add("error")
+//     event.target.classList.remove("success")
+//  };
+
+// })
+
+const formEl = document.querySelector(".js-contact-form")
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault()
+  console.log("hello");
+})
