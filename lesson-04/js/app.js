@@ -67,17 +67,16 @@ const markup = ` <li>
 listEl.insertAdjacentHTML("beforeend", markup);
 listEl.innerHTML = "";
 
-
 const text = `Об'єктна модель документа Document Object Model - незалежний від мови інтерфейс для роботи з HTML-документом. Містить набір властивостей і методів, що дозволяють шукати, створювати і видаляти елементи, реагувати на дії користувача і багато іншого. Тобто з'єднує сторінку з мовою програмування.`;
 
-const paragraphEl = document.createElement('p');
+const paragraphEl = document.createElement("p");
 const textArray = text.split(/\s+/);
-console.log(textArray);  
+// console.log(textArray);
 
-textArray.forEach(item => {
+textArray.forEach((item) => {
   if (item.length > 8) {
-    const spanEl = document.createElement('span');
-    spanEl.style.color = 'blue';
+    const spanEl = document.createElement("span");
+    spanEl.style.color = "blue";
     spanEl.textContent = `${item} `;
     paragraphEl.appendChild(spanEl);
   } else {
@@ -85,4 +84,21 @@ textArray.forEach(item => {
   }
 });
 
-listEl.after(paragraphEl);
+// listEl.after(paragraphEl);
+
+const randomNumber = () => Math.floor(Math.random() * 100) + 1;
+const divContainer = document.createElement("div");
+divContainer.classList.add("number-container");
+const divArr = [];
+for (let i = 0; i < 100; i += 1) {
+  const divEl = document.createElement("div");
+  divEl.classList.add("number");
+  divEl.textContent = randomNumber();
+  divEl.textContent % 2 === 0
+    ? divEl.classList.add("even")
+    : divEl.classList.add("odd");
+  divArr.push(divEl);
+}
+console.log(divArr);
+divContainer.append(...divArr);
+listEl.before(divContainer);
