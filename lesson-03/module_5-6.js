@@ -192,24 +192,21 @@ const user = {
     }
 
     if (newValue[0] === newValue[0].toUpperCase() && newValue.length >= 3) {
-      return this[key] = newValue;
+      return (this[key] = newValue);
     }
-  }
-} 
+  },
+};
 // user.info();
 
-// console.log(user.modify("age", 32));
-// user.info();
+console.log(user.modify("", 32));
+user.info();
 
 // const emploeer = Object.create(user);
 // emploeer.department = "developer";
 // console.log(emploeer);
 
-
 //TODO:=========task-02=================
 // Для обьекта "user", написати метод для зміни ім'я або прізвища(змінити можна лише якесь з цих полів, змінювати або додавати нові потрібно заборонити) з перевіркою на валідність даних(Перша літера має бути у верхньому реєстрі, довжина слова не менше 3 літер)
-
-
 
 // user.modify('firstName', 'Vlad');
 
