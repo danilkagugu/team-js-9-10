@@ -66,3 +66,23 @@ const markup = ` <li>
 
 listEl.insertAdjacentHTML("beforeend", markup);
 listEl.innerHTML = "";
+
+
+const text = `Об'єктна модель документа Document Object Model - незалежний від мови інтерфейс для роботи з HTML-документом. Містить набір властивостей і методів, що дозволяють шукати, створювати і видаляти елементи, реагувати на дії користувача і багато іншого. Тобто з'єднує сторінку з мовою програмування.`;
+
+const paragraphEl = document.createElement('p');
+const textArray = text.split(/\s+/);
+console.log(textArray);  
+
+textArray.forEach(item => {
+  if (item.length > 8) {
+    const spanEl = document.createElement('span');
+    spanEl.style.color = 'blue';
+    spanEl.textContent = `${item} `;
+    paragraphEl.appendChild(spanEl);
+  } else {
+    paragraphEl.innerHTML += `${item} `;
+  }
+});
+
+listEl.after(paragraphEl);
