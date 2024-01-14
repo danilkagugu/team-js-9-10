@@ -1,0 +1,11 @@
+import refs from "./refs.js";
+const { monthEl, dayEl, dayNumEl, yearEl } = refs;
+const date = new Date();
+const month = date.toLocaleDateString("uk-UA", { month: "long" });
+const day = date.toLocaleDateString("uk-UA", { weekday: "long" });
+const numDay = date.toLocaleDateString("uk-UA", { day: "numeric" });
+const year = date.toLocaleDateString("uk-UA", { year: "numeric" });
+monthEl.textContent = month;
+dayEl.textContent = day;
+dayNumEl.textContent = numDay;
+yearEl.textContent = year;
